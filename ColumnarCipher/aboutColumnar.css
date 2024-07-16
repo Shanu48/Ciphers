@@ -73,9 +73,15 @@ footer {
     background-color: #1a1a1a;
     color: #f1f1f1;
 }
+@media  (max-width: 600px) {
+    .img img{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
 /* Media query for tablets (portrait and landscape) */
 @media (min-width: 600px) and (max-width: 900px) {
-    .img {
+    .img img{
         width: 80%;
         margin: 0 auto;
     }
@@ -83,8 +89,8 @@ footer {
 
 /* Media query for desktops and large screens */
 @media (min-width: 900px) {
-    .img {
-        width: 60%;
+    .img img {
+        width: 80%;
         margin: 0 auto;
     }
 }
