@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aboutVigenere.css">
+    <title>About Vigenere Cipher</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cipher Tools</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Select Cipher
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="../ColumnarCipher/aboutColumnar.html">Columnar Cipher</a></li>
+                            <li><a class="dropdown-item" href="aboutVigenere.html">Vigenere Cipher</a></li>
+                            <!-- Add more ciphers as needed -->
+                        </ul>
+                    </li>
+                </ul>
+                <span class="navbar-text ml-auto">
+                    Vigenere Cipher <!-- Change this text according to the current page -->
+                </span>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center py-4">
+        <h1>Vigenere Cipher </h1>
+    </header>
+    <div class="container text-center" id="intro">
+        <div class="intro my-4" id="intro">
+            <p>The Vigenère Cipher is a classical encryption technique that uses a keyword to shift the letters of the plaintext message, creating a polyalphabetic cipher. This method provides a higher level of security compared to simple substitution ciphers by employing multiple Caesar ciphers based on the letters of the keyword.<br> 
+                <big>Encryption</big> - In a Vigenère cipher, each letter of the plaintext is shifted along the alphabet by the number of positions indicated by the corresponding letter of the keyword.
+                
+                <br>1) The keyword is repeated so that it matches the length of the plaintext.
+                <br>2) Each letter of the plaintext is shifted according to the corresponding letter of the keyword.
+                For example, if the keyword is "LEMON", and the plaintext is "ATTACKATDAWN", the keyword is repeated to "LEMONLEMONLE".
+                <br>3) The first letter of the plaintext 'A' is shifted by 'L' (11 positions) resulting in 'L', the second letter 'T' is shifted by 'E' (4 positions) resulting in 'X', and so on. The resulting ciphertext is "LXFOPVEFRNHR".
+                <br>
+
+                <big>Decryption</big> - 
+                
+                To decipher the message, the recipient must use the same keyword to reverse the shift.
+                
+                <br>1) The keyword is repeated to match the length of the ciphertext.
+                <br>2) Each letter of the ciphertext is shifted backward according to the corresponding letter of the keyword.
+                For example, using the same keyword "LEMON" and the ciphertext "LXFOPVEFRNHR", the keyword is repeated to "LEMONLEMONLE".
+                <br>3) The first letter of the ciphertext 'L' is shifted backward by 'L' (11 positions) resulting in 'A', the second letter 'X' is shifted backward by 'E' (4 positions) resulting in 'T', and so on. The resulting plaintext is "ATTACKATDAWN".</p>
+                
+
+
+        </div>
+        <div class="buttons my-4 d-flex justify-content-center">
+            <button id="btns" class="btn btn-primary btn-lg mx-2" onclick="location.href='VigenereCipher.html'">Generate the Cipher</button>
+            <button id="btns" class="btn btn-primary btn-lg mx-2" onclick="location.href='VigenereDecipher.html'">Decipher the Code</button>
+        </div>
+        <div class="buttons my-4" id="abtBtn">
+            <button class="btn btn-secondary btn-lg mx-2" onclick="location.href='../index.html'">Back</button>
+        </div>
+    </div>
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Columnar Cipher Website</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
